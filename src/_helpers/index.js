@@ -1,3 +1,4 @@
 import history from "./history";
+import api from "./api";
 
-export { history };
+export { history, api };
