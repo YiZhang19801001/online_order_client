@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "pingfang";
+  src: url("./fonts/pingfang/pingfang.ttf");
+}
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  color: #3b3b3b;
+  font-family: "pingfang", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+/* hide ugly scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-moz-scrollbar {
+  display: none;
+}
+
+.component-app .component-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.component-app .component-login .header {
+  height: 10vh;
+  width: 100%;
+  background-color: #141389;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+}
+.component-app .component-login form {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+.component-app .component-login form .form-field {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.component-app .component-login form .form-field label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.component-app .component-login form .form-field label span {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #211ef5;
+}
+.component-app .component-login form .form-field label input {
+  height: 2rem;
+  border-radius: 3px;
+  border: 1px solid #a5a5a5;
+  padding-left: 10px;
+  color: #8c8c8c;
+}
+.component-app .component-login form button {
+  height: 2.5rem;
+  width: 7rem;
+  margin-top: 10px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  background-color: #211ef5;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px #211ef5;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=App.css.map */
