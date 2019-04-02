@@ -1,9 +1,9 @@
 import React from "react";
 
 const ProductCard = ({ product }) => {
-  const { product_id, name, image, price } = product;
+  const { name, image, price } = product;
   return (
-    <div key={`product${product_id}`}>
+    <div>
       <p>{name}</p>
       <img src={image} alt={name} />
       <p>${price}</p>

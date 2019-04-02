@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 
 const ProductsGroup = ({ group }) => {
   return (
-    <div key={`productGroup${group.category}`}>
+    <div>
       <div>{group.category}</div>
       {renderProducts(group.products)}
     </div>
@@ -12,7 +12,9 @@ const ProductsGroup = ({ group }) => {
 
 const renderProducts = products => {
   return products.map(product => {
-    return <ProductCard product={product} />;
+    return (
+      <ProductCard product={product} key={`product${product.product_id}`} />
+    );
   });
 };
 

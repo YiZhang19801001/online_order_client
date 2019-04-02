@@ -8,7 +8,9 @@ const ProductsList = () => {
     return <h2>loading...</h2>;
   }
   return products.map(group => {
-    return <ProductsGroup group={group} />;
+    return (
+      <ProductsGroup group={group} key={`productGroup${group.category}`} />
+    );
   });
 };
 
