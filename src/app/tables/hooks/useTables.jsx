@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { api } from "../../../_helpers";
+import { useDispatch } from "redux-react-hook";
 
 export const getTables = (params = "all") => {
   console.log("getTables hook is called");

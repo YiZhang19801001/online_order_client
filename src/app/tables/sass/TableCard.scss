@@ -29,6 +29,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    line-height: 1.2rem;
+    text-align: center;
   }
 
   &.active {
