@@ -8,7 +8,7 @@ const userLogin = async requestBody => {
       "staff_order_user",
       JSON.stringify(response.data.data)
     );
-    history.push(`${process.env.PUBLIC_URL}/products`);
+    history.push(`${process.env.PUBLIC_URL}/tables`);
   } else {
     alert("email or password incorrect");
   }
@@ -21,7 +21,7 @@ const userChecking = async () => {
     history.push(`${process.env.PUBLIC_URL}/login`);
   }
 
-  history.push(`${process.env.PUBLIC_URL}/products`);
+  history.push(`${process.env.PUBLIC_URL}/tables`);
 };
 
 export { userLogin, userChecking };
