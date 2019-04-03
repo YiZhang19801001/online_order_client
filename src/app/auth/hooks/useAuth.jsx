@@ -16,6 +16,7 @@ const userLogin = async requestBody => {
 
 const userChecking = async () => {
   const user = JSON.parse(localStorage.getItem("staff_order_user"));
+  console.log("user checking hooks called");
 
   if (!user) {
     history.push(`${process.env.PUBLIC_URL}/login`);
