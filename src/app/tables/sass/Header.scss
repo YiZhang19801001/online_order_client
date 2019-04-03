@@ -1,0 +1,30 @@
+.component-tables .header {
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 0 3px 3px color("boxShadow");
+  background-color: color("bodyBackground");
+  .button {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    box-shadow: 0 0 3px color("boxShadow");
+    border: 2px solid color("main");
+    border-radius: 3px;
+    &.active {
+      box-shadow: none;
+      color: color("bodyBackground");
+      background-color: color("main");
+      border: none;
+      transition: all 400ms linear;
+    }
+  }
+}

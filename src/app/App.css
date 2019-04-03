@@ -98,7 +98,7 @@ body {
   height: 90vh;
   margin-top: 10vh;
   overflow: scroll;
-  background-color: antiquewhite;
+  background-color: #fff;
   padding: 1rem 0.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -116,9 +116,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0.4rem;
-}
-.component-tables .table-card:active {
-  background-color: #fff;
 }
 .component-tables .table-card .table_id {
   flex: 2;
@@ -153,6 +150,37 @@ body {
 }
 .component-tables .table-card.available {
   background-color: #ffba2d;
+}
+
+.component-tables .header {
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 0 3px 3px #d0d0d0;
+  background-color: #fff;
+}
+.component-tables .header .button {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  box-shadow: 0 0 3px #d0d0d0;
+  border: 2px solid #211ef5;
+  border-radius: 3px;
+}
+.component-tables .header .button.active {
+  box-shadow: none;
+  color: #fff;
+  background-color: #211ef5;
+  border: none;
+  transition: all 400ms linear;
 }
 
 /*# sourceMappingURL=App.css.map */
