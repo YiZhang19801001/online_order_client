@@ -185,4 +185,145 @@ body {
   transition: all 400ms linear;
 }
 
+.component-orders .header {
+  height: 7vh;
+  width: 100%;
+  box-shadow: 0 3px 3px #d0d0d0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #211ef5;
+  padding: 0 1rem;
+}
+
+.component-orders {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  box-sizing: border-box;
+  padding-top: 8vh;
+}
+
+.component-products {
+  display: flex;
+  height: 100%;
+  width: 100vw;
+}
+
+.component-products .categories-list {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  background-color: #f1f1f1;
+  font-size: 0.8rem;
+  width: 5rem;
+}
+.component-products .categories-list a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.component-products .categories-list a.active {
+  border-left: 2px solid #211ef5;
+  background-color: #fff;
+}
+.component-products .categories-list a span {
+  width: 100%;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+.component-products .products-list {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: calc(100vw - 5rem);
+}
+
+.component-products .products-list {
+  padding: 0 0.5rem;
+}
+.component-products .products-list .product-group h3 {
+  color: #8c8c8c;
+}
+.component-products .products-list .product-group .product-card {
+  display: flex;
+  height: 5rem;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+}
+.component-products .products-list .product-group .product-card .image-container {
+  width: 40%;
+  height: 100%;
+  padding: 0.5rem;
+}
+.component-products .products-list .product-group .product-card .image-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+.component-products .products-list .product-group .product-card .information {
+  flex: 1;
+  height: 100%;
+  padding: 0.6rem 0;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.component-products .products-list .product-group .product-card .information .name {
+  flex: 1;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #8c8c8c;
+}
+.component-products .products-list .product-group .product-card .information .price-control {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.component-products .products-list .product-group .product-card .information .price-control .price {
+  font-size: 0.7rem;
+  color: #211ef5;
+}
+.component-products .products-list .product-group .product-card .information .price-control .control-panel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 5rem;
+  color: #211ef5;
+}
+.component-products .products-list .product-group .product-card .information .price-control .control-panel.short {
+  justify-content: flex-end;
+}
+.component-products .products-list .product-group .product-card .information .price-control .control-panel .button {
+  display: flex;
+  align-items: flex-end;
+}
+.component-products .products-list .product-group .product-card .information .price-control .control-panel .quantiy {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=App.css.map */

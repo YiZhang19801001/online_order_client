@@ -1,0 +1,75 @@
+.component-products .products-list {
+  padding: 0 0.5rem;
+  .product-group {
+    h3 {
+      color: color("textPrimary");
+    }
+    .product-card {
+      display: flex;
+      height: 5rem;
+      width: 95%;
+      justify-content: space-between;
+      align-items: center;
+      .image-container {
+        width: 40%;
+        height: 100%;
+        padding: 0.5rem;
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 3px;
+        }
+      }
+      .information {
+        flex: 1;
+        height: 100%;
+        padding: 0.6rem 0;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .name {
+          flex: 1;
+          width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          font-size: 1rem;
+          color: color("textPrimary");
+        }
+        .price-control {
+          flex: 1;
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          .price {
+            font-size: 0.7rem;
+            color: color("main");
+          }
+          .control-panel {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 5rem;
+            color: color("main");
+            &.short {
+              justify-content: flex-end;
+            }
+            .button {
+              display: flex;
+              align-items: flex-end;
+            }
+            .quantiy {
+              display: flex;
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

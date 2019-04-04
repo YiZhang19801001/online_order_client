@@ -1,12 +1,17 @@
 import React from "react";
 import ProductCard from "./ProductCard";
+import { Element } from "react-scroll";
 
-const ProductsGroup = ({ group }) => {
+const ProductsGroup = ({ products, category }) => {
   return (
-    <div>
-      <div>{group.category}</div>
-      {renderProducts(group.products)}
-    </div>
+    <Element
+      className="product-group"
+      key={`productGroup${category}`}
+      name={`nav${category}`}
+    >
+      <h3>{category}</h3>
+      {renderProducts(products)}
+    </Element>
   );
 };
 
