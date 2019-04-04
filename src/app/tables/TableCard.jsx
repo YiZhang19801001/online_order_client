@@ -9,9 +9,9 @@ const TableCard = ({ table_id, size, table_status, current_order_id }) => {
 
   const handleClick = () => {
     if (parseInt(table_status) === 0) {
-      updateTables(table_id, "open_table");
+      updateTables(dispatch, table_id, "open_table");
     } else {
-      updateTables(table_id, "close_table");
+      updateTables(dispatch, table_id, "close_table");
     }
   };
   return (
