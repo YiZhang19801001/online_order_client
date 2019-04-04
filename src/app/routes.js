@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Router } from "react-router-dom";
 import { history, PrivateRoute } from "../_helpers";
 
-import { Products } from "./products";
 import { Login } from "./auth";
 import { Tables } from "./tables";
+import { OrderMainPage } from "./orders";
 
 const Routes = () => {
   return (
@@ -12,8 +12,8 @@ const Routes = () => {
       <React.Fragment>
         <Route exact path={`${process.env.PUBLIC_URL}/`} component={Login} />
         <PrivateRoute
-          path={`${process.env.PUBLIC_URL}/products`}
-          component={Products}
+          path={`${process.env.PUBLIC_URL}/orders/:table_id`}
+          component={OrderMainPage}
         />
         <PrivateRoute
           path={`${process.env.PUBLIC_URL}/tables`}
