@@ -194,6 +194,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #c7c7c7a5;
+}
+.component-shopping-cart .cart .content {
+  height: 90%;
+  width: 90%;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #d0d0d0;
+}
+
+.component-shopping-cart .cart .content .order-item .information {
+  font-size: 1rem;
+  color: #211ef5;
+}
+.component-shopping-cart .cart .content .order-item .information.cross {
+  text-decoration: line-through;
+  color: #8c8c8c;
 }
 
 .component-orders .header {

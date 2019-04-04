@@ -15,7 +15,14 @@ export default () => {
   return (
     <div className="component-shopping-cart">
       <Icon cart={shoppingCartList} setShowCart={setShowCart} />
-      {showCart && <Cart cart={shoppingCartList} />}
+      {showCart && (
+        <Cart
+          cart={shoppingCartList}
+          close={() => {
+            setShowCart(false);
+          }}
+        />
+      )}
     </div>
   );
 };

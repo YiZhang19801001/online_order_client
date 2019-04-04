@@ -1,10 +1,16 @@
 import React from "react";
+
 import OrderItemCard from "./OrderItemCard";
 
-export default ({ cart }) => {
+export default ({ cart, close }) => {
   return (
-    <div className="cart">
-      <div className="content">
+    <div className="cart" onClick={close}>
+      <div
+        className="content"
+        onClick={e => {
+          e.stopPropagation();
+        }}
+      >
         {cart.map(orderItem => {
           return (
             <OrderItemCard

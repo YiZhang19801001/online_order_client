@@ -7,4 +7,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: color("cover");
+  .content {
+    height: 90%;
+    width: 90%;
+    padding: 1rem;
+    background-color: color("bodyBackground");
+    border-radius: 5px;
+    box-shadow: 0 0 5px color("boxShadow");
+  }
 }

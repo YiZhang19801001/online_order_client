@@ -1,0 +1,10 @@
+.component-shopping-cart .cart .content .order-item {
+  .information {
+    font-size: 1rem;
+    color: color("main");
+    &.cross {
+      text-decoration: line-through;
+      color: color("textPrimary");
+    }
+  }
+}
