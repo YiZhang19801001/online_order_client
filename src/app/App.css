@@ -93,4 +93,96 @@ body {
   text-transform: uppercase;
 }
 
+.component-tables {
+  width: 100vw;
+  height: 90vh;
+  margin-top: 10vh;
+  overflow: scroll;
+  background-color: #fff;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.component-tables .table-card {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px #d0d0d0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+}
+.component-tables .table-card .table_id {
+  flex: 2;
+  font-size: 1.2rem;
+}
+.component-tables .table-card .table_size {
+  flex: 1;
+  font-size: 0.7rem;
+  color: #8c8c8c;
+}
+.component-tables .table-card .order_id {
+  flex: 1;
+  font-size: 0.6rem;
+  border-radius: 3px;
+  border: 1px solid #a5a5a5;
+  padding: 0.1rem 0.4rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.2rem;
+  text-align: center;
+}
+.component-tables .table-card.active {
+  background-color: #f55747;
+  color: #fff;
+}
+.component-tables .table-card.active .order_id {
+  background-color: #fff;
+  color: #f55747;
+}
+.component-tables .table-card.active .table_size {
+  color: #fff;
+}
+.component-tables .table-card.available {
+  background-color: #ffba2d;
+}
+
+.component-tables .header {
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 0 3px 3px #d0d0d0;
+  background-color: #fff;
+}
+.component-tables .header .button {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  box-shadow: 0 0 3px #d0d0d0;
+  border: 2px solid #211ef5;
+  border-radius: 3px;
+}
+.component-tables .header .button.active {
+  box-shadow: none;
+  color: #fff;
+  background-color: #211ef5;
+  border: none;
+  transition: all 400ms linear;
+}
+
 /*# sourceMappingURL=App.css.map */

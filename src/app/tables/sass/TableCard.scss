@@ -1,0 +1,50 @@
+.component-tables .table-card {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px color("boxShadow");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+
+  .table_id {
+    flex: 2;
+    font-size: 1.2rem;
+  }
+  .table_size {
+    flex: 1;
+    font-size: 0.7rem;
+    color: color("textPrimary");
+  }
+  .order_id {
+    flex: 1;
+    font-size: 0.6rem;
+    border-radius: 3px;
+    border: 1px solid color("border");
+    padding: 0.1rem 0.4rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1.2rem;
+    text-align: center;
+  }
+
+  &.active {
+    background-color: color("activeTable");
+    color: color("textButton");
+    .order_id {
+      background-color: color("bodyBackground");
+      color: color("secondary");
+    }
+    .table_size {
+      color: color("textButton");
+    }
+  }
+  &.available {
+    background-color: color("availableTable");
+  }
+}

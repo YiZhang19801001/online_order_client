@@ -8,7 +8,7 @@ const userLogin = async requestBody => {
       "staff_order_user",
       JSON.stringify(response.data.data)
     );
-    history.push(`${process.env.PUBLIC_URL}/products`);
+    history.push(`${process.env.PUBLIC_URL}/tables`);
   } else {
     alert("email or password incorrect");
   }
@@ -16,12 +16,13 @@ const userLogin = async requestBody => {
 
 const userChecking = async () => {
   const user = JSON.parse(localStorage.getItem("staff_order_user"));
+  console.log("user checking hooks called");
 
   if (!user) {
     history.push(`${process.env.PUBLIC_URL}/login`);
   }
 
-  history.push(`${process.env.PUBLIC_URL}/products`);
+  history.push(`${process.env.PUBLIC_URL}/tables`);
 };
 
 export { userLogin, userChecking };
