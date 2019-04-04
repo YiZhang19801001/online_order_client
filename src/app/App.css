@@ -185,6 +185,17 @@ body {
   transition: all 400ms linear;
 }
 
+.component-shopping-cart .cart {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .component-orders .header {
   height: 7vh;
   width: 100%;
@@ -194,11 +205,26 @@ body {
   left: 0;
   background-color: #fff;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
   color: #211ef5;
   padding: 0 1rem;
+}
+.component-orders .header .material-icons {
+  color: #211ef5;
+}
+.component-orders .header .icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 2.5rem;
+}
+.component-orders .header .icon-wrapper .material-icons {
+  font-size: 2rem;
+}
+.component-orders .header .icon-wrapper span {
+  padding-top: 6px;
 }
 
 .component-orders {
