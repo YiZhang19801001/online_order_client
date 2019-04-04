@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 import { useMappedState } from "redux-react-hook";
 
 import ControlPanel from "./ControlPanel";
@@ -15,14 +15,12 @@ const ProductCard = ({ product }) => {
   const { shoppingCartList } = useMappedState(mapState);
 
   const calculateQuantity = () => {
-    let sum = 0;
-    shoppingCartList.map(orderItem => {
+    return shoppingCartList.reduce((sum, orderItem) => {
       if (orderItem.product_id === product.product_id) {
-        sum = sum + orderItem.quantity;
+        return sum + orderItem.quantity;
       }
-    });
-
-    return sum;
+      return sum;
+    }, 0);
   };
 
   return (

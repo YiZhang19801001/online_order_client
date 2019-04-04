@@ -1,8 +1,9 @@
 export const shoppingCartList = (state = [], action) => {
+  let newState = [];
   switch (action.type) {
     case "add":
       let isExisting = false;
-      let newState = state.map(orderItem => {
+      newState = state.map(orderItem => {
         if (orderItem.product_id === action.product.product_id) {
           isExisting = true;
           return { ...orderItem, quantity: orderItem.quantity + 1 };
@@ -16,9 +17,24 @@ export const shoppingCartList = (state = [], action) => {
       return newState;
 
     case "decrease":
-      break;
+      newState = state.map(orderItem => {
+        if (orderItem.product_id === action.product.product_id) {
+          return { ...orderItem, quantity: orderItem.quantity - 1 };
+        } else {
+          return orderItem;
+        }
+      });
+      newState = newState.filter(orderItem => orderItem.quantity !== 0);
+      return newState;
     case "increase":
-      break;
+      newState = state.map(orderItem => {
+        if (orderItem.product_id === action.product.product_id) {
+          return { ...orderItem, quantity: orderItem.quantity + 1 };
+        } else {
+          return orderItem;
+        }
+      });
+      return newState;
     default:
       return state;
   }

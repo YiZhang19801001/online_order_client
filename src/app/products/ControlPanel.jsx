@@ -8,7 +8,12 @@ export default ({ quantity, product }) => {
     <div className={`control-panel ${!flag ? "short" : ""}`}>
       {flag && (
         <>
-          <div className="button decrese">
+          <div
+            className="button decrese"
+            onClick={() => {
+              dispatch({ type: "decrease", product });
+            }}
+          >
             <i className="material-icons">remove_circle</i>
           </div>
           <div className="quantity">
