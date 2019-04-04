@@ -1,20 +1,26 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { api } from "../../../_helpers";
 import { useDispatch } from "redux-react-hook";
 
-export const getTables = (params = "all") => {
+export const getTables = (filter = "all") => {
   console.log("getTables hook is called");
-
-  const [tables, setTables] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    callApi(setTables, params);
-  }, [params]);
-
-  return tables;
+    callGetApi(dispatch, { filter });
+  }, [filter]);
 };
 
-const callApi = async (setTables, filter) => {
-  const response = await api.get("/tables", { params: { filter } });
-  setTables(response.data.tables);
+export const updateTables = async (dispatch, table_id, method) => {
+  console.log("updateTables hook is called");
+
+  const response = await api.put(`/tables/${table_id}`, { method });
+
+  dispatch({ type: "updateTables", table: response.data.table });
+};
+
+const callGetApi = async (dispatch, params) => {
+  const response = await api.get("/tables", { params });
+
+  dispatch({ type: "getTables", tables: response.data.tables });
 };

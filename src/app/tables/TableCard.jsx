@@ -1,21 +1,23 @@
 import React from "react";
-import { connect } from "react-redux";
-import { updateTables } from "../../_actions";
-const TableCard = ({
-  table_id,
-  size,
-  table_status,
-  current_order_id,
-  updateTables
-}) => {
+import { updateTables } from "./hooks";
+import { useDispatch } from "redux-react-hook";
+
+const TableCard = ({ table_id, size, table_status, current_order_id }) => {
   const labels = { empty_order_id: `无订单分配`, table_size_suffix: `人台` };
 
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    if (parseInt(table_status) === 0) {
+      updateTables(table_id, "open_table");
+    } else {
+      updateTables(table_id, "close_table");
+    }
+  };
   return (
     <div
       className={`table-card ${getClassName(table_status)}`}
-      onClick={() => {
-        updateTables(table_id, "open_table");
-      }}
+      onClick={handleClick}
     >
       <span className="table_id">{table_id}</span>
       <span className="table_size">
@@ -41,7 +43,4 @@ const getClassName = value => {
   }
 };
 
-export default connect(
-  null,
-  { updateTables }
-)(TableCard);
+export default TableCard;

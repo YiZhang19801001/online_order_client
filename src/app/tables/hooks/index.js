@@ -1,3 +1,3 @@
-import { getTables } from "./useTables";
+import { getTables, updateTables } from "./useTables";
 
-export { getTables };
+export { getTables, updateTables };

@@ -1,32 +1,33 @@
-import React, { useState, useContext } from "react";
-import { useDispatch, useMappedState, StoreContext } from "redux-react-hook";
+import React, { useCallback, useState } from "react";
+import { useMappedState } from "redux-react-hook";
 import { getTables } from "./hooks";
 import TableCard from "./TableCard";
 import Header from "./Header";
 const Page = () => {
-  const store = useContext(StoreContext);
-  console.log(store);
+  const [filter, setFilter] = useState("all");
 
-  // // Declare your memoized mapState function
-  // const mapState = useCallback(
-  //   state => ({
-  //     tables: state.tables
-  //   }),
-  //   []
-  // );
-  // // Get data from and subscribe to the store
-  // // const { canDelete, name } = useMappedState(mapState);
-  // const setParams = () => {};
-  // if (!tables) {
-  //   return <div>loading...</div>;
-  // }
+  getTables(filter);
+
+  // Declare your memoized mapState function
+  const mapState = useCallback(
+    state => ({
+      tables: state.tables
+    }),
+    []
+  );
+
+  // Get data from and subscribe to the store
+  const { tables } = useMappedState(mapState);
+
+  if (!tables) {
+    return <div>loading...</div>;
+  }
   return (
     <div className="component-tables">
-      abc
-      {/* <Header setParams={setParams} />
+      <Header setFilter={setFilter} />
       {tables.map(table => {
         return <TableCard {...table} key={`table${table.table_id}`} />;
-      })} */}
+      })}
     </div>
   );
 };

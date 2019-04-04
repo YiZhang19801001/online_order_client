@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Header = ({ setParams }) => {
+const Header = ({ setFilter }) => {
   const labels = { all: "全部", active: "已开台", available: "空台" };
 
   const [classNames, setClassNames] = useState({
@@ -17,7 +17,7 @@ const Header = ({ setParams }) => {
           active: false,
           available: false
         });
-        setParams("all");
+        setFilter("all");
         break;
       case "active":
         setClassNames({
@@ -25,7 +25,7 @@ const Header = ({ setParams }) => {
           active: !classNames.active,
           available: false
         });
-        setParams("active");
+        setFilter("active");
 
         break;
       case "available":
@@ -34,7 +34,7 @@ const Header = ({ setParams }) => {
           active: false,
           available: !classNames.available
         });
-        setParams("available");
+        setFilter("available");
 
         break;
       default:
