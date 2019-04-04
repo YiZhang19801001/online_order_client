@@ -292,7 +292,7 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #8c8c8c;
 }
 .component-products .products-list .product-group .product-card .information .price-control {
