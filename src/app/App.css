@@ -275,6 +275,7 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 3px;
+  box-shadow: 0 0 2px #d0d0d0;
 }
 .component-products .products-list .product-group .product-card .information {
   flex: 1;

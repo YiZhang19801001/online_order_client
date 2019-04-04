@@ -1,9 +1,7 @@
 import React, { useCallback } from "react";
 import ProductsGroup from "./ProductsGroup";
-import ProductCard from "./ProductCard";
 import { useMappedState } from "redux-react-hook";
 import { useProducts } from "./hooks";
-import { Element } from "react-scroll";
 import CategoryCard from "./CategoryCard";
 
 const ProductsList = () => {

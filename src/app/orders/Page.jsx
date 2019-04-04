@@ -8,7 +8,7 @@ const Page = ({ match }) => {
     <div className="component-orders">
       <Header table_id={table_id} />
       <Products />
-      {/* <ShoppingCart /> */}
+      <ShoppingCart />
     </div>
   );
 };
