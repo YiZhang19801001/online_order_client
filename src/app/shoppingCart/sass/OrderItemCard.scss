@@ -16,7 +16,7 @@
   }
   .control-panel {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     width: 5rem;
     color: color("main");
@@ -24,7 +24,7 @@
       display: flex;
       align-items: flex-end;
     }
-    .quantiy {
+    .quantity {
       display: flex;
       height: 100%;
       align-items: center;

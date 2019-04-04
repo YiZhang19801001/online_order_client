@@ -13,7 +13,7 @@ export default ({ orderItem }) => {
             dispatch({ type: "decrease", product: orderItem });
           }}
         >
-          <i className="material-icons">remove_circle</i>
+          <i className="material-icons">remove_circle_outline</i>
         </div>
         <div className="quantity">
           <span>{quantity}</span>
@@ -26,7 +26,7 @@ export default ({ orderItem }) => {
           dispatch({ type: "increase", product: orderItem });
         }}
       >
-        <i className="material-icons">add_circle</i>
+        <i className="material-icons">add_circle_outline</i>
       </div>
     </div>
   );

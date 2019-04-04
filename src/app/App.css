@@ -225,7 +225,7 @@ body {
 }
 .component-shopping-cart .cart .content .order-item .control-panel {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   width: 5rem;
   color: #211ef5;
@@ -234,7 +234,7 @@ body {
   display: flex;
   align-items: flex-end;
 }
-.component-shopping-cart .cart .content .order-item .control-panel .quantiy {
+.component-shopping-cart .cart .content .order-item .control-panel .quantity {
   display: flex;
   height: 100%;
   align-items: center;
