@@ -203,15 +203,42 @@ body {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #d0d0d0;
+  overflow: scroll;
 }
 
+.component-shopping-cart .cart .content .order-item {
+  display: flex;
+  height: 3rem;
+  border-bottom: 1px solid #a5a5a5;
+  justify-content: space-between;
+  align-items: center;
+}
 .component-shopping-cart .cart .content .order-item .information {
   font-size: 1rem;
+  flex: 1;
   color: #211ef5;
+  padding-left: 1rem;
 }
 .component-shopping-cart .cart .content .order-item .information.cross {
   text-decoration: line-through;
   color: #8c8c8c;
+}
+.component-shopping-cart .cart .content .order-item .control-panel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 5rem;
+  color: #211ef5;
+}
+.component-shopping-cart .cart .content .order-item .control-panel .button {
+  display: flex;
+  align-items: flex-end;
+}
+.component-shopping-cart .cart .content .order-item .control-panel .quantiy {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .component-orders .header {

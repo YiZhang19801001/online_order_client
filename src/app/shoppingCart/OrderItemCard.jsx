@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "redux-react-hook";
+import ControlPanel from "./ControlPanel";
 
 const OrderItemCard = ({ item }) => {
   const { name, quantity, completed, product_id } = item;
@@ -11,11 +12,15 @@ const OrderItemCard = ({ item }) => {
   };
 
   return (
-    <div className="order-item" onClick={checkOrderItem}>
-      <input type="checkbox" checked={completed} />
-      <div className={`information ${!completed ? "" : "cross"}`}>
+    <div className="order-item">
+      <input type="checkbox" checked={completed} onChange={checkOrderItem} />
+      <div
+        className={`information ${!completed ? "" : "cross"}`}
+        onClick={checkOrderItem}
+      >
         {name} x {quantity}
       </div>
+      <ControlPanel orderItem={item} />
     </div>
   );
 };
