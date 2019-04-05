@@ -200,10 +200,12 @@ body {
   height: 90%;
   width: 90%;
   padding: 1rem;
+  padding-bottom: 0;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #d0d0d0;
   overflow: scroll;
+  position: relative;
 }
 
 .component-shopping-cart .cart .content .order-item {
@@ -223,6 +225,37 @@ body {
   text-decoration: line-through;
   color: #8c8c8c;
 }
+
+.component-shopping-cart .cart .content .footer {
+  height: 3.5rem;
+  width: calc(100% + 2rem);
+  position: sticky;
+  bottom: 0;
+  margin-left: -1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 -3px 3px #d0d0d0;
+}
+.component-shopping-cart .cart .content .footer button {
+  width: 5rem;
+  height: 2rem;
+  background-color: #211ef5;
+  border-radius: 3px;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px #211ef5;
+  transition: all 400ms linear;
+  outline: none;
+}
+.component-shopping-cart .cart .content .footer button:active {
+  background-color: #fff;
+  color: #8c8c8c;
+  border-color: #211ef5;
+  box-shadow: none;
+}
+
 .component-shopping-cart .cart .content .order-item .control-panel {
   display: flex;
   align-items: center;

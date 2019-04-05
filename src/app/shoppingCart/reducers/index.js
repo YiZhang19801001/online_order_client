@@ -42,7 +42,7 @@ export const shoppingCartList = (state = [], action) => {
       return newState;
     case "check":
       newState = state.map(orderItem => {
-        if (orderItem.product_id === action.product_id) {
+        if (orderItem.order_product_id === action.order_product_id) {
           return { ...orderItem, completed: !orderItem.completed };
         } else {
           return orderItem;
@@ -50,6 +50,8 @@ export const shoppingCartList = (state = [], action) => {
       });
 
       return cusSorting("completed", 1, newState);
+    case "getCart":
+      return action.cart;
     default:
       return state;
   }
