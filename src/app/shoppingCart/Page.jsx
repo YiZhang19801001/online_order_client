@@ -9,6 +9,7 @@ export default ({ location }) => {
 
   const dispatch = useDispatch();
 
+  // render ordered items if existing any
   useEffect(() => {
     const fn = async () => {
       const response = await api.get("/orders", { params: { link_id } });
@@ -20,14 +21,15 @@ export default ({ location }) => {
       dispatch({ type: "getCart", cart: [] });
     }
   }, []);
+
   // Declare your memoized mapState function
   const mapState = useCallback(
-    ({ shoppingCartList }) => ({ shoppingCartList }),
+    ({ shoppingCartList, orderedList }) => ({ shoppingCartList, orderedList }),
     []
   );
   const [showCart, setShowCart] = useState(false);
   // Get data from and subscribe to the store
-  const { shoppingCartList } = useMappedState(mapState);
+  const { shoppingCartList, orderedList } = useMappedState(mapState);
 
   return (
     <div className="component-shopping-cart">
@@ -39,6 +41,7 @@ export default ({ location }) => {
             setShowCart(false);
           }}
           link_id={link_id}
+          list={orderedList}
         />
       )}
     </div>
