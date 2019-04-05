@@ -1,3 +1,3 @@
 import ShoppingCart from "./Page";
-
-export { ShoppingCart };
+import Icon from "./Icon";
+export { ShoppingCart, Icon };

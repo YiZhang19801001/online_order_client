@@ -1,0 +1,17 @@
+.component-shopping-cart .cart .content .order-item .control-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+  color: color("main");
+  .button {
+    display: flex;
+    align-items: flex-end;
+  }
+  .quantity {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}

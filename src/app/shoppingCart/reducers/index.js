@@ -1,3 +1,5 @@
+import { cusSorting } from "../../../_helpers";
+
 export const shoppingCartList = (state = [], action) => {
   let newState = [];
   switch (action.type) {
@@ -12,7 +14,10 @@ export const shoppingCartList = (state = [], action) => {
         }
       });
       if (!isExisting) {
-        return [...newState, { ...action.product, quantity: 1 }];
+        return [
+          ...newState,
+          { ...action.product, quantity: 1, completed: false }
+        ];
       }
       return newState;
 
@@ -35,6 +40,18 @@ export const shoppingCartList = (state = [], action) => {
         }
       });
       return newState;
+    case "check":
+      newState = state.map(orderItem => {
+        if (orderItem.order_product_id === action.order_product_id) {
+          return { ...orderItem, completed: !orderItem.completed };
+        } else {
+          return orderItem;
+        }
+      });
+
+      return cusSorting("completed", 1, newState);
+    case "getCart":
+      return action.cart;
     default:
       return state;
   }
