@@ -1,0 +1,39 @@
+.component-products {
+  .categories-list {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    background-color: color("categoryBackground");
+    font-size: 0.8rem;
+    width: 5rem;
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 4rem;
+      width: 100%;
+      box-sizing: border-box;
+      &.active {
+        border-left: 2px solid color("main");
+        background-color: color("bodyBackground");
+      }
+      span {
+        width: 100%;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: center;
+      }
+    }
+  }
+  .products-list {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    width: calc(100vw - 5rem);
+  }
+}

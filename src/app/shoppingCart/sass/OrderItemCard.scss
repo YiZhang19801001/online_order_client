@@ -1,0 +1,17 @@
+.component-shopping-cart .cart .content .order-item {
+  display: flex;
+  height: 3rem;
+  border-bottom: 1px solid color("border");
+  justify-content: space-between;
+  align-items: center;
+  .information {
+    font-size: 1rem;
+    flex: 1;
+    color: color("main");
+    padding-left: 1rem;
+    &.cross {
+      text-decoration: line-through;
+      color: color("textPrimary");
+    }
+  }
+}

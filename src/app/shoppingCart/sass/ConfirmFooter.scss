@@ -1,0 +1,31 @@
+.component-shopping-cart .cart .content {
+  .footer {
+    height: 3.5rem;
+    width: calc(100% + 2rem);
+    position: sticky;
+    bottom: 0;
+    margin-left: -1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: color("whiteCover");
+    box-shadow: 0 -3px 3px color("boxShadow");
+    button {
+      width: 5rem;
+      height: 2rem;
+      background-color: color("main");
+      border-radius: 3px;
+      color: color("textButton");
+      border: 1px solid color("bodyBackground");
+      box-shadow: 0 0 3px color("main");
+      transition: all 400ms linear;
+      outline: none;
+      &:active {
+        background-color: color("bodyBackground");
+        color: color("textPrimary");
+        border-color: color("main");
+        box-shadow: none;
+      }
+    }
+  }
+}

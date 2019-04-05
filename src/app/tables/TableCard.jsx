@@ -1,6 +1,7 @@
 import React from "react";
 import { updateTables } from "./hooks";
 import { useDispatch } from "redux-react-hook";
+import { api, history } from "../../_helpers";
 
 const TableCard = ({ table_id, size, table_status, current_order_id }) => {
   const labels = { empty_order_id: `无订单分配`, table_size_suffix: `人台` };
@@ -11,9 +12,14 @@ const TableCard = ({ table_id, size, table_status, current_order_id }) => {
     if (parseInt(table_status) === 0) {
       updateTables(dispatch, table_id, "open_table");
     } else {
-      updateTables(dispatch, table_id, "close_table");
+      history.push(
+        `${
+          process.env.PUBLIC_URL
+        }/orders/${table_id}?link_id=${current_order_id}`
+      );
     }
   };
+
   return (
     <div
       className={`table-card ${getClassName(table_status)}`}
@@ -41,6 +47,12 @@ const getClassName = value => {
     default:
       return "";
   }
+};
+
+const rerenderTables = async link_id => {
+  const response = await api.get("/orders", { params: { link_id } });
+
+  return response.data.cart;
 };
 
 export default TableCard;
