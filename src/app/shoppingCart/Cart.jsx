@@ -8,6 +8,7 @@ export default ({ cart, close, link_id, list }) => {
 
   const submitShoppingCart = async () => {
     const response = await api.post("orders", { cart, link_id });
+
     dispatch({ type: "getCart", cart: response.data.cart });
     close();
   };

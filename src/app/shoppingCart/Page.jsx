@@ -30,7 +30,6 @@ export default ({ location }) => {
   const [showCart, setShowCart] = useState(false);
   // Get data from and subscribe to the store
   const { shoppingCartList, orderedList } = useMappedState(mapState);
-  console.log({ shoppingCartList });
 
   return (
     <div className="component-shopping-cart">
