@@ -5,6 +5,7 @@ import { history, PrivateRoute } from "../_helpers";
 import { Login } from "./auth";
 import { Tables } from "./tables";
 import { OrderMainPage } from "./orders";
+import { Payment } from "./pay";
 
 const Routes = () => {
   return (
@@ -18,6 +19,10 @@ const Routes = () => {
         <PrivateRoute
           path={`${process.env.PUBLIC_URL}/tables`}
           component={Tables}
+        />
+        <PrivateRoute
+          path={`${process.env.PUBLIC_URL}/checkout/:current_order_id`}
+          component={Payment}
         />
       </React.Fragment>
     </Router>

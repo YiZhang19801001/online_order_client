@@ -1,0 +1,41 @@
+.component-tables .table-card {
+  .modal {
+    position: fixed;
+    background-color: color("cover");
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+      height: 60%;
+      width: 80%;
+      background-color: color("bodyBackground");
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 5px;
+      button {
+        background-color: color("bodyBackground");
+        color: color("main");
+        border: 2px solid color("main");
+        width: 70%;
+        height: 7rem;
+        font-size: 2rem;
+        box-shadow: 0 0 5px color("boxShadow");
+        transition: all 200ms linear;
+        font-family: inherit;
+        border-radius: 3px;
+        outline: none;
+        &:active {
+          box-shadow: none;
+          background-color: color("main");
+          color: color("textButton");
+        }
+      }
+    }
+  }
+}
