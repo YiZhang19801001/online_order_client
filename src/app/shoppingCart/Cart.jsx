@@ -1,8 +1,10 @@
 import React from "react";
 import { useDispatch } from "redux-react-hook";
-import OrderItemCard from "./OrderItemCard";
 import ConfirmFooter from "./ConfirmFooter";
+import OrderingList from "./OrderingList";
+import OrderedList from "./OrderedList";
 import { api } from "../../_helpers";
+
 export default ({ cart, close, link_id, list }) => {
   const dispatch = useDispatch();
 
@@ -13,36 +15,6 @@ export default ({ cart, close, link_id, list }) => {
     close();
   };
 
-  const renderCart = () => {
-    return (
-      <div className="cart-list">
-        {cart.map(orderItem => {
-          return (
-            <OrderItemCard
-              item={orderItem}
-              key={`orderItem${orderItem.product_id}`}
-            />
-          );
-        })}
-      </div>
-    );
-  };
-
-  const renderOrderedList = () => {
-    return (
-      <div className="ordered-list">
-        {list.map(orderItem => {
-          return (
-            <OrderItemCard
-              item={orderItem}
-              key={`orderItem${orderItem.order_product_id}`}
-            />
-          );
-        })}
-      </div>
-    );
-  };
-
   return (
     <div className="cart" onClick={close}>
       <div
@@ -51,8 +23,10 @@ export default ({ cart, close, link_id, list }) => {
           e.stopPropagation();
         }}
       >
-        {renderCart()}
-        {renderOrderedList()}
+        <div className="body">
+          <OrderingList cart={cart} />
+          <OrderedList list={list} />
+        </div>
 
         <ConfirmFooter onSubmit={submitShoppingCart} />
       </div>

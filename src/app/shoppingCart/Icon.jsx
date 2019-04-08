@@ -1,11 +1,6 @@
 import React from "react";
-
+import { calculateQuantity } from "./helper";
 export default ({ cart, setShowCart }) => {
-  const calculateQuantity = () => {
-    return cart.reduce((sum, orderItem) => {
-      return sum + orderItem.quantity;
-    }, 0);
-  };
   return (
     <div className="icon-wrapper">
       <i
@@ -17,7 +12,7 @@ export default ({ cart, setShowCart }) => {
         shopping_cart
       </i>
 
-      <span>{calculateQuantity()}</span>
+      <span>{calculateQuantity(cart)}</span>
     </div>
   );
 };
