@@ -288,6 +288,11 @@ body {
   font-size: 1.2rem;
   color: #211ef5;
   padding: 0 1rem;
+  transition: all 300ms linear;
+}
+.component-orders .header.hide {
+  transform: translateY(-7vh);
+  box-shadow: none;
 }
 .component-orders .header .material-icons {
   color: #211ef5;
@@ -311,6 +316,10 @@ body {
   overflow: scroll;
   box-sizing: border-box;
   padding-top: 8vh;
+  transition: all 300ms linear;
+}
+.component-orders.hide {
+  padding-top: 1vh;
 }
 
 .component-products {

@@ -1,9 +1,9 @@
 import React from "react";
 import ProductsList from "./ProductsList";
-const Page = () => {
+const Page = ({ toggleHeader }) => {
   return (
     <div className="component-products">
-      <ProductsList />
+      <ProductsList toggleHeader={toggleHeader} />
     </div>
   );
 };

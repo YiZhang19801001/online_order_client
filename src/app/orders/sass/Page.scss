@@ -4,4 +4,8 @@
   overflow: scroll;
   box-sizing: border-box;
   padding-top: 8vh;
+  transition: all 300ms linear;
+  &.hide {
+    padding-top: 1vh;
+  }
 }

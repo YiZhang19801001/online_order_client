@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+
 export default ({ category }) => {
   return (
     <Link

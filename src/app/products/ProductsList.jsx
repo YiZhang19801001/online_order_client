@@ -1,10 +1,11 @@
 import React, { useCallback } from "react";
-import ProductsGroup from "./ProductsGroup";
+
 import { useMappedState } from "redux-react-hook";
 import { useProducts } from "./hooks";
 import CategoryCard from "./CategoryCard";
+import ListOfProducts from "./ListOfProducts";
 
-const ProductsList = () => {
+const ProductsList = ({ toggleHeader }) => {
   useProducts();
 
   // Declare your memoized mapState function
@@ -16,12 +17,11 @@ const ProductsList = () => {
   if (products.length === 0) {
     return <h2>loading...</h2>;
   }
+
   return (
     <>
       <div className="categories-list">{renderCategories(products)}</div>
-      <div className="products-list" id="product-list">
-        {renderProducts(products)}
-      </div>
+      <ListOfProducts products={products} toggleHeader={toggleHeader} />
     </>
   );
 };
@@ -34,12 +34,6 @@ const renderCategories = products => {
         {...category}
       />
     );
-  });
-};
-
-const renderProducts = products => {
-  return products.map(group => {
-    return <ProductsGroup {...group} key={`productGroup${group.category}`} />;
   });
 };
 
