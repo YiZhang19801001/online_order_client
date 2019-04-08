@@ -4,7 +4,7 @@ import { useDispatch } from "redux-react-hook";
 import { history } from "../../_helpers";
 
 const TableCard = ({ table_id, size, table_status, current_order_id }) => {
-  const labels = { empty_order_id: `无订单分配`, table_size_suffix: `人台` };
+  const labels = { empty_order_id: `无订单分配`, table_size_suffix: `人台` }; //!fake data
 
   const dispatch = useDispatch();
 
