@@ -1,0 +1,22 @@
+.component-shopping-cart .cart .content .body {
+  .cart-list,
+  .ordered-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .header {
+      position: static;
+      width: 98%;
+      font-size: 1rem;
+      box-shadow: 0 0 3px color("boxShadow");
+      margin-bottom: 3px;
+      transition: all 200ms linear;
+      &.detail {
+        height: 2rem;
+        background-color: color("main");
+        color: color("textButton");
+      }
+    }
+  }
+}
