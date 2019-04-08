@@ -185,7 +185,7 @@ body {
   transition: all 400ms linear;
 }
 
-.component-tables .table-card .modal {
+.component-tables .modal {
   position: fixed;
   background-color: #c7c7c7a5;
   height: 100vh;
@@ -196,7 +196,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.component-tables .table-card .modal .content {
+.component-tables .modal .content {
   height: 60%;
   width: 80%;
   background-color: #fff;
@@ -206,7 +206,7 @@ body {
   align-items: center;
   border-radius: 5px;
 }
-.component-tables .table-card .modal .content button {
+.component-tables .modal .content button {
   background-color: #fff;
   color: #211ef5;
   border: 2px solid #211ef5;
@@ -219,7 +219,7 @@ body {
   border-radius: 3px;
   outline: none;
 }
-.component-tables .table-card .modal .content button:active {
+.component-tables .modal .content button:active {
   box-shadow: none;
   background-color: #211ef5;
   color: #fff;
