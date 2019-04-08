@@ -16,7 +16,11 @@
     background-color: color("bodyBackground");
     border-radius: 5px;
     box-shadow: 0 0 5px color("boxShadow");
-    overflow: scroll;
     position: relative;
+    .body {
+      height: calc(100% - 3.5rem);
+      overflow: scroll;
+      position: relative;
+    }
   }
 }
