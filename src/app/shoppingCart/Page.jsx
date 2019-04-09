@@ -9,6 +9,8 @@ export default ({ location }) => {
 
   const dispatch = useDispatch();
 
+  const [showCart, setShowCart] = useState(false);
+
   // render ordered items if existing any
   useEffect(() => {
     const fn = async () => {
@@ -17,6 +19,7 @@ export default ({ location }) => {
     };
     if (link_id) {
       fn();
+      setShowCart(true);
     } else {
       dispatch({ type: "getCart", cart: [] });
     }
@@ -27,9 +30,10 @@ export default ({ location }) => {
     ({ shoppingCartList, orderedList }) => ({ shoppingCartList, orderedList }),
     []
   );
-  const [showCart, setShowCart] = useState(false);
+
   // Get data from and subscribe to the store
   const { shoppingCartList, orderedList } = useMappedState(mapState);
+  // * try to initial the value for showCart
 
   return (
     <div className="component-shopping-cart">
@@ -46,4 +50,17 @@ export default ({ location }) => {
       )}
     </div>
   );
+};
+
+const getFlag = list => {
+  console.log("get flag function been called with: ", list);
+
+  let flag = false;
+  useEffect(() => {
+    if (list.length > 0) {
+      flag = true;
+    }
+  }, [list.length]);
+
+  return flag;
 };
