@@ -12,6 +12,12 @@ const Routes = () => {
     <Router history={history}>
       <React.Fragment>
         <Route exact path={`${process.env.PUBLIC_URL}/`} component={Login} />
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/login`}
+          component={Login}
+        />
+
         <PrivateRoute
           path={`${process.env.PUBLIC_URL}/orders/:table_id`}
           component={OrderMainPage}
